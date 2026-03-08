@@ -83,7 +83,7 @@ export default function Home() {
               {playbook.targetName} Penetration Playbook
             </h1>
             <p className="text-gray-600 mb-6">
-              Generated on {new Date(playbook.generatedAt).toLocaleString()}
+              Generated on {playbook.generatedAt ? new Date(playbook.generatedAt).toLocaleString() : 'Just now'}
             </p>
 
             {/* Fit Analysis */}

@@ -28,7 +28,7 @@ export async function enrichContext(
   const enrichmentPrompt = getEnrichmentPrompt(inputs, targetData, companyData);
 
   const message = await client.messages.create({
-    model: "claude-3-5-haiku-20241022",
+    model: "claude-3-haiku-20240307",
     max_tokens: 1024,
     messages: [
       {
@@ -59,7 +59,7 @@ export async function generateDecisionArchitecture(
   const prompt = getDecisionArchitecturePrompt(inputs, enriched);
 
   const message = await client.messages.create({
-    model: "claude-3-5-haiku-20241022",
+    model: "claude-3-haiku-20240307",
     max_tokens: 2048,
     messages: [
       {
@@ -90,7 +90,7 @@ export async function generateProcurementProcess(
   const prompt = getProcurementProcessPrompt(inputs, enriched);
 
   const message = await client.messages.create({
-    model: "claude-3-5-haiku-20241022",
+    model: "claude-3-haiku-20240307",
     max_tokens: 2048,
     messages: [
       {
@@ -121,7 +121,7 @@ export async function generateProfilePresentation(
   const prompt = getProfilePresentationPrompt(inputs, enriched);
 
   const message = await client.messages.create({
-    model: "claude-3-5-haiku-20241022",
+    model: "claude-3-haiku-20240307",
     max_tokens: 2048,
     messages: [
       {
@@ -152,7 +152,7 @@ export async function generatePositioningStrategy(
   const prompt = getPositioningStrategyPrompt(inputs, enriched);
 
   const message = await client.messages.create({
-    model: "claude-3-5-haiku-20241022",
+    model: "claude-3-haiku-20240307",
     max_tokens: 2048,
     messages: [
       {
